@@ -1,0 +1,15 @@
+inputSet:
+  name: client-api
+  tags: {}
+  identifier: clientapi
+  orgIdentifier: default
+  projectIdentifier: IDA
+  pipeline:
+    identifier: client-api
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
