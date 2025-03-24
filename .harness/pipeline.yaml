@@ -61,9 +61,9 @@ pipeline:
           versionLabel: v0.1.0
           gitBranch: main
     - stage:
-        name: Canary
-        identifier: Canary
+        name: K8sRollOut
+        identifier: K8sRollOut
         tags: {}
         template:
-          templateRef: CanaryDeploy
+          templateRef: K8sRollOut
           versionLabel: v0.1.0          
