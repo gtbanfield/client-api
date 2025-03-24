@@ -1,0 +1,69 @@
+pipeline:
+  name: client-api
+  identifier: clientapi
+  projectIdentifier: IDA
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.Github
+        repoName: client-api
+        build: <+input>
+  stages:
+    - stage:
+        name: CI
+        identifier: CI
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          infrastructure:
+            type: KubernetesDirect
+            spec:
+              connectorRef: account.k8s
+              namespace: api
+              automountServiceAccountToken: true
+              nodeSelector: {}
+              os: Linux
+          execution:
+            steps:
+              - step:
+                  name: Git-Clone
+                  identifier: GitClone
+                  template:
+                    templateRef: Git
+                    versionLabel: v0.1.0                    
+              - step:
+                  type: Run
+                  name: Mvn
+                  identifier: Run_1
+                  spec:
+                    connectorRef: account.harnessImage
+                    image: maven:3.9.9-amazoncorretto-17-al2023
+                    shell: Sh
+                    command: |-
+                      java --version
+                      mvn clean install -DskipTests
+              - step:
+                  name: docker
+                  identifier: docker
+                  template:
+                    templateRef: Dockerv2
+                    versionLabel: v0.1.1
+                    gitBranch: main       
+    - stage:
+        name: Approval
+        identifier: Approval
+        tags: {}
+        template:
+          templateRef: Approval
+          versionLabel: v0.1.0
+          gitBranch: main
+    - stage:
+        name: Canary
+        identifier: Canary
+        tags: {}
+        template:
+          templateRef: CanaryDeploy
+          versionLabel: v0.1.0          
