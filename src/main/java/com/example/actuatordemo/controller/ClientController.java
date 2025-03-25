@@ -20,7 +20,9 @@ public class ClientController {
     @GetMapping("/get-data")
     public ResponseEntity<String> getDataFromApi2() {
         //URL of API22
-        String api2Url = "http://localhost:8081/api2/data";
+        //String api2Url = "http://localhost:8081/api2/data";
+        String api2Url = "http://server-api:8081/server-api/v1.0/api2/data";
+
         //Call API2
         ResponseEntity<String> response = restTemplate.getForEntity(api2Url, String.class);
         //Return response
