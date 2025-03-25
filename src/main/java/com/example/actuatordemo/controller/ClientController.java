@@ -21,12 +21,12 @@ public class ClientController {
     public ResponseEntity<String> getDataFromApi2() {
         //URL of API22
         //String api2Url = "http://localhost:8081/api2/data";
-        String api2Url = "http://server-api:8081/server-api/v1.0/api2/data";
+        String api2Url = "http://server-api:8080/server-api/v1.0/api2/data";
 
         //Call API2
         ResponseEntity<String> response = restTemplate.getForEntity(api2Url, String.class);
         //Return response
-        return ResponseEntity.ok("Grant this is the response Data from API 2 on host 8081: " + response.getBody());
+        return ResponseEntity.ok("Grant this is the response Data from API 2 on host 8080: " + response.getBody());
     }
 
     @GetMapping(path = "test", produces = MediaType.TEXT_PLAIN_VALUE)
