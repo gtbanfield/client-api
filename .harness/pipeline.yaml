@@ -33,7 +33,7 @@ pipeline:
                   identifier: GitClone
                   template:
                     templateRef: Git
-                    versionLabel: v0.1.0                    
+                    versionLabel: v0.1.0
               - step:
                   type: Run
                   name: Mvn
@@ -55,19 +55,12 @@ pipeline:
                     templateInputs:
                       type: BuildAndPushDockerRegistry
                       spec:
-                        tags: <+input>                    
-    # - stage:
-    #     name: Approval
-    #     identifier: Approval
-    #     tags: {}
-    #     template:
-    #       templateRef: Approval
-    #       versionLabel: v0.1.0
-    #       gitBranch: main
+                        tags: <+input>
+                        dockerfile: <+input>
     - stage:
         name: K8sRollOut
         identifier: K8sRollOut
         tags: {}
         template:
           templateRef: K8sRollOut
-          versionLabel: v0.1.0          
+          versionLabel: v0.1.0
