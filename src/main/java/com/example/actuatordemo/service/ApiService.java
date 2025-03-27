@@ -18,7 +18,7 @@ public class ApiService {
         String api2Url = "http://server-api:8080/server-api/api2"; // URL of API 2
         // Set the header
         HttpHeaders headers = new HttpHeaders();
-        headers.set("reg-channel-version", customHeader);
+        headers.set("Custom-Header", customHeader);
 
         // Create the request entity
         HttpEntity<String> requestEntity = new HttpEntity<>(headers);
