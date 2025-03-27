@@ -15,7 +15,7 @@ public class Api1Controller {
     private ApiService apiService;
 
     @GetMapping("/api1")
-    public ResponseEntity<String> callApi2(@RequestHeader("Custom-Header") String customHeader) {
+    public ResponseEntity<String> callApi2(@RequestHeader("reg-channel-version") String customHeader) {
         // Call API 2 and pass the header
         System.out.println("Header reg-channel-version is : " + customHeader);
         String response = apiService.callApi2(customHeader);
