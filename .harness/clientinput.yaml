@@ -27,3 +27,4 @@ inputSet:
                         spec:
                           tags: client-api-harnesslive
                           dockerfile: Dockerfile
+
