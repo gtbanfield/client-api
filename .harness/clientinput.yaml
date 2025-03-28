@@ -25,5 +25,6 @@ inputSet:
                       templateInputs:
                         type: BuildAndPushDockerRegistry
                         spec:
-                          tags: <+input>
-                          dockerfile: <+input>
+                          tags: client-api-harnesslive
+                          dockerfile: Dockerfile
+

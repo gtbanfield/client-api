@@ -5,11 +5,11 @@ import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
 import org.springframework.stereotype.Component;
 
 @Component
-@Endpoint(id = "client")
+@Endpoint(id = "client-api")
 public class CustomEndpoint {
 
     @ReadOperation
     public String customEndpoint() {
-        return "Hi Grant, this is Client endpoint!";
+        return "Hi Grant, this is Client endpoint! from Harnesslive branch";
     }
 }
