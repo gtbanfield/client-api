@@ -18,7 +18,7 @@ public class ApiService {
 
         // Set the header
         HttpHeaders headers = new HttpHeaders();
-        headers.set("Custom-Header", customHeader);
+        headers.set("reg-channel-version", customHeader);
 
         // Create the request entity
         HttpEntity<String> requestEntity = new HttpEntity<>(headers);
