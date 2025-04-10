@@ -1,4 +1,4 @@
-package com.example.actuatordemo;
+package com.example;
 
 import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
 import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
