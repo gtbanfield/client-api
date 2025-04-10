@@ -1,0 +1,8 @@
+/Users/gtbanfield/GIT/client-api/src/main/java/com/example/Application.java
+/Users/gtbanfield/GIT/client-api/src/main/java/com/example/UserRepository/UserRepository.java
+/Users/gtbanfield/GIT/client-api/src/main/java/com/example/entity/User.java
+/Users/gtbanfield/GIT/client-api/src/main/java/com/example/health/CustomHealthIndicator.java
+/Users/gtbanfield/GIT/client-api/src/main/java/com/example/CustomEndpoint.java
+/Users/gtbanfield/GIT/client-api/src/main/java/com/example/controller/UserController.java
+/Users/gtbanfield/GIT/client-api/src/main/java/com/example/service/ApiService.java
+/Users/gtbanfield/GIT/client-api/src/main/java/com/example/config/ActuatorSecurityConfig.java
