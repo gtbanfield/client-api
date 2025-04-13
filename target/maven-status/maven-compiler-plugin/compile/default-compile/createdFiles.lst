@@ -1,8 +1,0 @@
-com/example/UserRepository/UserRepository.class
-com/example/service/ApiService.class
-com/example/health/CustomHealthIndicator.class
-com/example/Application.class
-com/example/config/ActuatorSecurityConfig.class
-com/example/CustomEndpoint.class
-com/example/controller/UserController.class
-com/example/entity/User.class
