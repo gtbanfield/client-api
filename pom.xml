@@ -94,7 +94,7 @@
 	</dependencies>
 
 	<build>
-        <finalName>cloudsql</finalName>
+        <finalName>cloud sql</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
