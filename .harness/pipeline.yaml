@@ -65,6 +65,8 @@ pipeline:
                     connectorRef: account.Nexus
                     repo: harness
                     tags: <+input>
+                    settings:
+                      insecure: true
                     caching: true
     - stage:
         name: K8sRollOut
