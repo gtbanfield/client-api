@@ -57,6 +57,15 @@ pipeline:
                       spec:
                         tags: <+input>
                         dockerfile: <+input>
+              - step:
+                  type: BuildAndPushDockerRegistry
+                  name: BuildAndPushDockerRegistry_1
+                  identifier: BuildAndPushDockerRegistry_1
+                  spec:
+                    connectorRef: account.Nexus
+                    repo: harness
+                    tags: <+input>
+                    caching: true
     - stage:
         name: K8sRollOut
         identifier: K8sRollOut
