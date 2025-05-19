@@ -51,7 +51,7 @@ pipeline:
                   identifier: Nexus
                   spec:
                     connectorRef: account.Nexus
-                    repo: https://192.168.1.83:5000/repository/harness
+                    repo: 192.168.1.83:5000/repository/harness
                     settings:
                       PLUGIN_SKIP_TLS_VERIFY: "true"
                     tags: <+input>
