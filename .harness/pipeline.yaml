@@ -53,7 +53,7 @@ pipeline:
                     connectorRef: account.Nexus
                     repo: 192.168.1.83:5000/repository/harness
                     tags:
-                      - latest
+                      - <+inputset>
                     envVariables:
                       PLUGIN_SKIP_TLS_VERIFY: "true"
               - step:
