@@ -46,15 +46,16 @@ pipeline:
                       java --version
                       mvn clean install -DskipTests
               - step:
-                  type: BuildAndPushDockerRegistry
+                  type: Plugin
                   name: Nexus
                   identifier: Nexus
                   spec:
-                    connectorRef: account.Nexus
-                    repo: 192.168.1.83:5000/repository/harness
+                    connectorRef: account.harnessImage
+                    image: harnesscommunity/publish-nexus-repository:1.1.1
                     settings:
-                      PLUGIN_SKIP_TLS_VERIFY: "true"
-                    tags: <+input>
+                      username: admin
+                      password: <+secrets.getValue("nexus_password")>
+                      server_url: https://192.168.1.83:5000
               - step:
                   name: docker
                   identifier: docker
