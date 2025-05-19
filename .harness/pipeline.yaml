@@ -47,7 +47,7 @@ pipeline:
                       mvn clean install -DskipTests
               - step:
                   type: BuildAndPushDockerRegistry
-                  name: BuildAndPushDockerRegistry_1
+                  name: Nexus
                   identifier: BuildAndPushDockerRegistry_1
                   spec:
                     connectorRef: account.Nexus
