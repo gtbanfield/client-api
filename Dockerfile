@@ -5,7 +5,8 @@ RUN apt-get install -y curl
 COPY target/client.jar /usr/src/app
 
 
+ARG APP_NAME
+ENV APP_NAME=${APP_NAME}
 
 
-
-CMD ["java","-jar","/usr/src/app/client.jar"]
+CMD ["java","-jar","/usr/src/app/${APP_NAME}.jar"]
