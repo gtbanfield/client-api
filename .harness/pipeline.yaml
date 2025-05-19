@@ -52,8 +52,9 @@ pipeline:
                   spec:
                     connectorRef: account.Nexus
                     repo: 192.168.1.83:5000/repository/harness
-                    tags:
-                      - <+inputset>
+                    settings:
+                      PLUGIN_SKIP_TLS_VERIFY: "true"
+                    tags: <+input>
               - step:
                   name: docker
                   identifier: docker
