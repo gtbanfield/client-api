@@ -52,8 +52,7 @@ pipeline:
                   spec:
                     connectorRef: account.Nexus
                     repo: 192.168.1.83:5000/repository/harness
-                    tags:
-                      - <+inputset>
+                    tags: <+input>
                     dockerfile: /harness/devops-central/Dockerfile
                     buildArgs:
                       APP_NAME: <+pipeline.name>
