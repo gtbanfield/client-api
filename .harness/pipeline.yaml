@@ -48,13 +48,12 @@ pipeline:
               - step:
                   type: BuildAndPushDockerRegistry
                   name: Nexus
-                  identifier: BuildAndPushDockerRegistry_1
+                  identifier: Nexus
                   spec:
                     connectorRef: account.Nexus
-                    repo: harness
+                    repo: 192.168.1.83:5000/repository/harness
                     tags:
-                      - latest
-                contextType: Pipeline
+                      - <+inputset>
               - step:
                   name: docker
                   identifier: docker
