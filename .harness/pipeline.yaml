@@ -57,6 +57,17 @@ pipeline:
                       spec:
                         tags: <+input>
                         dockerfile: <+input>
+              - step:
+                  type: BuildAndPushDockerRegistry
+                  name: BuildAndPushDockerRegistry_1
+                  identifier: BuildAndPushDockerRegistry_1
+                  spec:
+                    connectorRef: account.Nexus
+                    settings:
+                      PLUGIN_SKIP_TLS_VERIFY: "true"
+                    repo: 192.168.1.83:5000/repository/
+                    tags:
+                      - <+inputset>
     - stage:
         name: K8sRollOut
         identifier: K8sRollOut
