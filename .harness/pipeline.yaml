@@ -77,3 +77,9 @@ pipeline:
         template:
           templateRef: K8sRollOut
           versionLabel: v0.1.0
+  variables:
+    - name: APP_NAME
+      type: String
+      description: ""
+      required: false
+      value: <+pipeline.name>
