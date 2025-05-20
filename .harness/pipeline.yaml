@@ -83,3 +83,4 @@ pipeline:
       description: ""
       required: false
       value: <+pipeline.name>
+  allowStageExecutions: true
