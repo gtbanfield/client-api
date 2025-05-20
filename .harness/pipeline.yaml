@@ -69,7 +69,6 @@ pipeline:
                       type: BuildAndPushDockerRegistry
                       spec:
                         tags: <+input>
-                        dockerfile: <+input>
     - stage:
         name: K8sRollOut
         identifier: K8sRollOut
