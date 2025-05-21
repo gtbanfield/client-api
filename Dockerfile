@@ -6,7 +6,7 @@ COPY target/client.jar /usr/src/app
 
 
 ARG APP_NAME
-ENV APP_NAME=${APP_NAME}
+ENV APP_NAME=client
 
 
 CMD ["java","-jar","/usr/src/app/${APP_NAME}.jar"]
