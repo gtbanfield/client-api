@@ -1,0 +1,5 @@
+com/example/entity/Student.class
+com/example/controller/StudentController.class
+com/example/service/StudentService.class
+com/example/config/RedisConfig.class
+com/example/RedisApplication.class

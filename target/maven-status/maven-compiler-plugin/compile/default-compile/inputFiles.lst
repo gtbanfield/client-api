@@ -1,7 +1,5 @@
-/Users/gtbanfield/GIT/client-api/src/main/java/com/example/Application.java
-/Users/gtbanfield/GIT/client-api/src/main/java/com/example/service/UserRedisService.java
-/Users/gtbanfield/GIT/client-api/src/main/java/com/example/entity/User.java
+/Users/gtbanfield/GIT/client-api/src/main/java/com/example/entity/Student.java
+/Users/gtbanfield/GIT/client-api/src/main/java/com/example/service/StudentService.java
+/Users/gtbanfield/GIT/client-api/src/main/java/com/example/RedisApplication.java
 /Users/gtbanfield/GIT/client-api/src/main/java/com/example/config/RedisConfig.java
-/Users/gtbanfield/GIT/client-api/src/main/java/com/example/health/CustomHealthIndicator.java
-/Users/gtbanfield/GIT/client-api/src/main/java/com/example/CustomEndpoint.java
-/Users/gtbanfield/GIT/client-api/src/main/java/com/example/config/ActuatorSecurityConfig.java
+/Users/gtbanfield/GIT/client-api/src/main/java/com/example/controller/StudentController.java
