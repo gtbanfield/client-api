@@ -1,0 +1,34 @@
+inputSet:
+  name: RTL
+  identifier: RTL
+  orgIdentifier: default
+  projectIdentifier: IDA
+  pipeline:
+    identifier: clientapi
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
+    stages:
+      - stage:
+          identifier: CI
+          type: CI
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: BuildAndPushDockerRegistry_1
+                    type: BuildAndPushDockerRegistry
+                    spec:
+                      tags:
+                        - <+trigger.commitSha>
+                - step:
+                    identifier: docker
+                    template:
+                      templateInputs:
+                        type: BuildAndPushDockerRegistry
+                        spec:
+                          tags: <+input>
