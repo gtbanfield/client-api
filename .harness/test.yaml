@@ -24,4 +24,4 @@ inputSet:
                     type: BuildAndPushDockerRegistry
                     spec:
                       tags:
-                        - v1
+                        - <+trigger.commitSha>
