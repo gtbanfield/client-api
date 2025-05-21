@@ -1,0 +1,27 @@
+inputSet:
+  name: test
+  identifier: test
+  orgIdentifier: default
+  projectIdentifier: IDA
+  pipeline:
+    identifier: clientapi
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
+    stages:
+      - stage:
+          identifier: CI
+          type: CI
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: BuildAndPushDockerRegistry_1
+                    type: BuildAndPushDockerRegistry
+                    spec:
+                      tags:
+                        - v1
