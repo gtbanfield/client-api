@@ -58,17 +58,6 @@ pipeline:
                       APP_NAME: <+pipeline.name>
                     envVariables:
                       PLUGIN_SKIP_TLS_VERIFY: "true"
-              - step:
-                  name: docker
-                  identifier: docker
-                  template:
-                    templateRef: Docker
-                    versionLabel: v0.1.0
-                    gitBranch: main
-                    templateInputs:
-                      type: BuildAndPushDockerRegistry
-                      spec:
-                        tags: <+input>
     - stage:
         name: K8sRollOut
         identifier: K8sRollOut
