@@ -22,7 +22,7 @@ service:
               valuesPaths:
               #- manifests/client-api/sit/configmap/configmap.yaml
               - manifests/client-api/sit/immutable/values.yaml
-              # - trigger-values/<+pipeline.triggerType>/values.yaml
+              - trigger-values/<+pipeline.triggerType>/values.yaml              
               skipResourceVersioning: false
               enableDeclarativeRollback: false
               helmVersion: V3
